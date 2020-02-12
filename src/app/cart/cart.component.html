@@ -1,0 +1,38 @@
+<div *ngIf="cartList<=0">
+  your cart is empty
+</div>
+
+<div *ngFor="let cart of cartList" class="butodersbumnerCart">
+  <table id="customers">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">id</th>
+      <th scope="col">image</th>
+      <th scope="col">pizza</th>
+      <th scope="col">size</th>
+      <th scope="col">price</th>
+      <th scope="col">quantity</th>
+      <th scope="col">delete</th>
+    </tr>
+
+    <tr *ngFor="let pizza of cart.pizzas;let i = index" style="border: 1px solid grey">
+      <td scope="row">{{i+1}}</td>
+      <td>{{cart.id}}</td>
+      <td class="imagePizza">
+      <img src="http://localhost:8080/api/pizza/files/{{pizza.image}}" alt="pizza"></td>
+      <td>{{pizza.name}}</td>
+      <td> {{pizza.size}}</td>
+      <td> {{pizza.price}}</td>
+
+        <td style="width: 100px"><button (click)="decrease()">-</button>
+        {{count}}
+        <button (click)="increase()">+</button></td>
+
+      <td style="width: 100px"><button (click)="deletePizzaInCart(pizza.id)"  class="btn btn-danger">Delete</button></td>
+    </tr>
+  </table>
+  <div style="text-align: right; margin: 10px 20px 0 0">
+    <button (click)="commanderPizzaInCart(cart)" class="btn btn-danger" >Commander</button>
+  </div>
+
+</div>

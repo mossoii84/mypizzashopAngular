@@ -1,0 +1,27 @@
+
+
+<div class="chat">
+  <div>Chat</div>
+<table  *ngFor="let message of messages">
+  <tr><td>Message de :{{username}}</td></tr>
+  <tr><td>{{message}}</td></tr>
+</table>
+</div>
+
+
+
+
+<!--isConnected -Возвращает true, если связь с сервером установлена, или false,
+если связь с сервером отсутствует или прервана.-->
+<main *ngIf="isConnected">
+  <form *ngIf="!username" #formName='ngForm' (ngSubmit)="sendName(formName.value)">
+    <input type="text" name="username" ngModel/>
+    <button type="submit">SendName</button>
+  </form>
+
+
+  <form *ngIf="username" #formChat='ngForm' (ngSubmit)="sendMessage(formChat.value)">
+    <input type="text" name="message" placeholder="Type message..." ngModel/>
+    <button type="submit">SendMessage</button>
+  </form>
+</main>

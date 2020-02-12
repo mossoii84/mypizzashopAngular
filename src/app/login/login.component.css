@@ -1,0 +1,23 @@
+.row {
+  display: inline-grid;
+  grid-template-columns: 200px 600px 200px;
+  margin: 100px 25px;
+}
+.col-sm{
+}
+#usernameHelp{
+  padding-left: 55px;
+}
+.form-check{
+  padding: 5px 0 5px 40px;
+}
+#username{
+  width: 130px;
+}
+#password{
+  width: 130px;
+  margin: 10px 0 5px 4px;
+}
+button{
+  margin-top: 10px;
+}

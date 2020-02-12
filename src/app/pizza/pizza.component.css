@@ -1,0 +1,39 @@
+.listPizza {
+  display: inline-grid;
+  grid-template-columns: repeat(5, 1fr);
+  border: 1px solid darkslategrey;
+  width: 190px;
+  height: 320px;
+  margin: 20px 5px 15px 12px;
+  background-color: darkorange;
+  /*grid-auto-flow: column;*/
+}
+.cart{
+  display: grid;
+  justify-content:center;
+  align-content:center;
+  text-align: center;
+  margin: 0 auto;
+}
+.pizzaname{
+  font: bold italic 22px serif ;
+  color: white;
+  width: 190px;
+  margin: 0 auto;
+}
+.sizename{
+  padding-top: 10px;
+  font:  italic 16px serif;
+}
+img{
+  width: 190px;
+  height: 190px;
+  margin: 5px 0 0 -3px;
+}
+.pizzaprice{
+  font:  italic 16px serif; /* Размер текста в ссылках. */
+  width: 190px;
+  margin: 0 auto;
+}
+
+

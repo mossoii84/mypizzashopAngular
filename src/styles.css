@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+/*для grid сам добавил*/
+@import '../node_modules/ag-grid-community/dist/styles/ag-grid.css';
+@import '../node_modules/ag-grid-community/dist/styles/ag-theme-balham.css';
+
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';

@@ -1,0 +1,38 @@
+<div class="container">
+      <div class="header">
+    <nav class="navcontainer">
+     <a class="navbar-logo" href=""><img src=""></a>
+        <a routerLink="/">Home</a>
+        <a routerLink="cart">Cart</a>
+        <a routerLink="orders">Orders</a>
+             <a routerLink="login">Login</a>
+             <a routerLink="registration">Registration</a>
+    </nav>
+    </div>
+
+  <div class="content"><router-outlet></router-outlet></div>
+
+<div class="menu">
+    <div class="account">
+    <a routerLink="account" routerLinkActive="active">
+    <img src="/assets/myphotoPizza/persone-fill.svg" alt="" width="32" height="32"></a>
+    <span>{{info.username}}</span>
+    </div>
+
+        <div>
+        <a class="logout" routerLink="" routerLinkActive="active">
+        <button class="img-fluid rounded" (click)="logout()">Logout</button></a>
+        </div>
+   <div>
+    <app-websocketchat>Chat</app-websocketchat>
+   </div>
+
+</div>
+
+
+  <div class="footer"><img src="/assets/myphotoPizza/footer.png" alt="" style="width: 100%"></div>
+</div>
+
+
+
+

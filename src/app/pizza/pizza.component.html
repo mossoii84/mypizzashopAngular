@@ -1,0 +1,43 @@
+<base href="/">
+
+<div class="listPizza" *ngFor="let pizza of listPizza">
+<table class="cart">
+  <tr>
+    <th>
+      <div class="pizzaname">{{pizza.name}}</div>
+      <div class="sizename">{{pizza.size}}</div>
+    </th>
+  </tr>
+
+  <tr>
+    <td>
+      <img src="http://localhost:8080/api/pizza/files/{{pizza.image}}" alt="pizza"></td>
+  </tr>
+
+  <tr>
+    <td class="pizzaprice">
+      <div>{{pizza.price}}</div>
+      <div><button  class="pizzapricebutton" (click)="buyPizza(pizza)" >Buy</button></div>
+    </td>
+  </tr>
+</table>
+</div>
+
+<!--<div class="listPizza" *ngFor="let pizza of listPizza">-->
+<!--<table>-->
+<!--  <tr><td>{{pizza.id}}-->
+<!--    {{pizza.name}}{{pizza.size}}-->
+<!--  </td></tr>-->
+
+<!--  <tr><td style="width: 100%; height: 190px">-->
+<!--&lt;!&ndash;  <img src={{pizza.image}} alt="pizza">&ndash;&gt;-->
+<!--  </td></tr>-->
+
+<!--  <tr><td>-->
+<!--  {{pizza.price}}-->
+<!--    <button mat-raised-button (click)="buyPizza(pizza)" color="primary">Buy</button>-->
+<!--  </td></tr>-->
+<!--</table>-->
+<!--</div>-->
+
+

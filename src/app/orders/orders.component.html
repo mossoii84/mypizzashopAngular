@@ -1,0 +1,28 @@
+<div *ngIf="allOrders==0">
+  your cart is empty
+</div>
+
+<div *ngFor="let order of allOrders" class="butodersbumnerCart">
+  <table id="customers">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">id</th>
+      <th scope="col">Date</th>
+      <th scope="col">Image</th>
+      <th scope="col">Pizza</th>
+      <th scope="col">Size</th>
+      <th scope="col">price</th>
+    </tr>
+
+    <tr *ngFor="let pizza of order.pizzas;let i = index" style="border: 1px solid grey">
+      <td scope="row">{{i+1}}</td>
+      <td>{{order.id}}</td>
+      <td>{{order.dateCreatOrder}}</td>
+      <td class="imagePizza"><img src="http://localhost:8080/api/pizza/files/{{pizza.image}}" alt="pizza"></td>
+      <td>{{pizza.name}}</td>
+      <td> {{pizza.size}}</td>
+      <td> {{pizza.price}}</td>
+  </table>
+</div>
+
+
